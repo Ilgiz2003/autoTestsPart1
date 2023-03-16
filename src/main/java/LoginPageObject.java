@@ -13,7 +13,7 @@ public class LoginPageObject {
     }
 
     public SelenideElement getButtonInput() {
-        return $x("//div[@class='login-form-actions']//input[@value='Войти в Одноклассники']");
+        return $x("//div[@class='login-form-actions']//input[@value='Р’РѕР№С‚Рё РІ РћРґРЅРѕРєР»Р°СЃСЃРЅРёРєРё']");
     }
 
 }
