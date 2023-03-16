@@ -6,6 +6,6 @@ import com.codeborne.selenide.SelenideElement;
 public class ProfilePageObject {
 
     public SelenideElement getAccountName() {
-        return $x("//div[@class='nav-side_i-w']//a[@aria-label='Ильгиз Дусеев']");
+        return $x("//div[@class='nav-side_i-w']//a[@aria-label='РР»СЊРіРёР· Р”СѓСЃРµРµРІ']");
     }
 }
