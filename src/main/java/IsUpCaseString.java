@@ -1,16 +1,11 @@
-import jdk.jfr.Description;
-
-import java.util.regex.Matcher;
+import org.hamcrest.Factory;
+import org.hamcrest.TypeSafeMatcher;
 
 
 public class IsUpCaseString extends TypeSafeMatcher<String> {
 
-    public void describeTo(Description description) {
-        description.appendText("a up case string");
-    }
-
     @Factory
-    public static Matcher<String> isAUpCaseString() {
+    public static IsUpCaseString isAUpCaseString() {
         return new IsUpCaseString();
     }
 
@@ -18,9 +13,14 @@ public class IsUpCaseString extends TypeSafeMatcher<String> {
     protected boolean matchesSafely(String string) {
         for (int i = 0; i < string.length(); i++) {
             if (Character.isLowerCase(string.charAt(i))) {
-                return false
+                return false;
             }
         } 
         return true;
+    }
+
+    @Override
+    public void describeTo(org.hamcrest.Description description) {
+        description.appendText("a up case string");
     }
 }
